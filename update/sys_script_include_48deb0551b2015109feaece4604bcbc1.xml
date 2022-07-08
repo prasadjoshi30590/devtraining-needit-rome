@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.GetSimilarCategoryIncident</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetSimilarCategoryIncident</name>
+        <script><![CDATA[var GetSimilarCategoryIncident = Class.create();
+GetSimilarCategoryIncident.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    GetCategoryIncidents: function() {
+        var cnt = 0;
+        var gr = new GlideRecord('incident');
+        //    gr.addQuery('category', this.getParameter('sysparm_getcategory'));
+        var catr = this.getParameter('sysparm_getcategory');
+		var asg = this.getParameter('sysparm_asg');
+        var genqry = "category="+catr+" AND state="+asg;
+		//gs.addInfoMessage(genqry);
+		gr.addEncodedQuery(genqry);
+        gr.query();
+        while (gr.next()) {
+            cnt = cnt + 1;
+        }
+        return cnt;
+    },
+
+    type: 'GetSimilarCategoryIncident'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 14:16:37</sys_created_on>
+        <sys_id>48deb0551b2015109feaece4604bcbc1</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>GetSimilarCategoryIncident</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_48deb0551b2015109feaece4604bcbc1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-07 01:55:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.RestrictStateForP1</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>RestrictStateForP1</name>
+        <script><![CDATA[var RestrictStateForP1 = RestrictStateForP1lass.create();
+RestrictStateForP1.prototype = {
+    initialize: function() {
+        var cnt = 0;
+        var gr = new GlideRecord('incident');
+        gr.addQuery('category', this.getParameter("sysparm_category"));
+        gr.query();
+        while (gr.next()) {
+		cnt ++;
+        }
+		return cnt;
+    },
+
+
+
+    type: 'RestrictStateForP1'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 09:42:25</sys_created_on>
+        <sys_id>9e3000991b6cd1109feaece4604bcb62</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>RestrictStateForP1</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_9e3000991b6cd1109feaece4604bcb62</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 14:11:57</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>26e4dc41db003410ad8dd7c8f4961939</instance_id>
+        <instance_name>dev114411</instance_name>
+        <name>sys_script_include_9e3000991b6cd1109feaece4604bcb62</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_58872_needit.RestrictStateForP1&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;RestrictStateForP1&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var RestrictStateForP1 = RestrictStateForP1lass.create();
+RestrictStateForP1.prototype = {
+    initialize: function() {
+        var cnt = 0;
+        var gr = new GlideRecord('incident');
+        gr.addQuery('category', this.getParameter("sysparm_category"));
+        gr.query();
+        while (gr.next()) {
+		cnt ++;
+        }
+		return cnt;
+    },
+
+
+
+    type: 'RestrictStateForP1'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-06 09:42:25&lt;/sys_created_on&gt;&lt;sys_id&gt;9e3000991b6cd1109feaece4604bcb62&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;RestrictStateForP1&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_9e3000991b6cd1109feaece4604bcb62&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-06 14:11:57&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1834125465</payload_hash>
+        <record_name>RestrictStateForP1</record_name>
+        <reverted_from/>
+        <source>fa1ec96e1b9451109feaece4604bcbfb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 14:11:57</sys_created_on>
+        <sys_id>24beb4551b2015109feaece4604bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181d3da70cd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 14:11:57</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>e8beb45503201510b6d2c8b3305e04a4</update_guid>
+        <update_guid_history>e8beb45503201510b6d2c8b3305e04a4:1834125465,65d2401d246cd1105f4242006f3e9f30:-1730368674,a4014099a86cd11020e8e3f38064c6fc:-1150265231</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-06 14:12:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>05269a56f247453d8271db9537ffcbc1</sys_id>
+        <sys_metadata>9e3000991b6cd1109feaece4604bcb62</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RestrictStateForP1</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_include_9e3000991b6cd1109feaece4604bcb62</sys_update_name>
+        <sys_update_version display_value="sys_script_include_9e3000991b6cd1109feaece4604bcb62">24beb4551b2015109feaece4604bcba5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-06 14:12:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
