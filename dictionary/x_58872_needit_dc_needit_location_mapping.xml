@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="DC NeedIT Location mapping" max_length="40" name="x_58872_needit_dc_needit_location_mapping" sizeclass="3" type="collection">
+        <element choice="3" label="Country" mandatory="true" max_length="40" name="country" type="choice">
+            <choice>
+                <element dependent_value="Auckland" inactive_on_update="false" label="New Zeland" value="NZ"/>
+                <element dependent_value="Singapore" inactive_on_update="false" label="Singapore" value="Singapore"/>
+                <element dependent_value="Bangkok" inactive_on_update="false" label="Thailand" value="Thailand"/>
+                <element dependent_value="Sydney" inactive_on_update="false" label="Australia" sequence="1" value="Australia"/>
+                <element dependent_value="Mumbai" inactive_on_update="false" label="India" sequence="1" value="India"/>
+            </choice>
+        </element>
+        <element label="DataCenter Name" max_length="100" name="datacenter_name" type="string"/>
+        <element label="Domain" max_length="100" name="domain" type="string"/>
+        <element label="Last inpection date" max_length="40" name="last_inpection_date" type="glide_date_time"/>
+        <element choice="3" label="Pairing Enabled (Yes/No)" mandatory="true" max_length="40" name="pairing_enabled_yes_no" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="No"/>
+                <element inactive_on_update="false" label="Yes" value="Yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Severity" mandatory="true" max_length="100" name="severity" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sev 1" value="Sev 1"/>
+                <element inactive_on_update="false" label="Sev 2" value="Sev 2"/>
+                <element inactive_on_update="false" label="Sev 3" value="Sev 3"/>
+            </choice>
+        </element>
+        <element choice="1" label="City" max_length="100" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Auckland" value="Auckland"/>
+                <element inactive_on_update="false" label="Bangkok" value="Bangkok"/>
+                <element inactive_on_update="false" label="Singapore" value="Singapore"/>
+                <element inactive_on_update="false" label="Sydney" sequence="0" value="Sydney"/>
+            </choice>
+        </element>
+    </element>
+</database>

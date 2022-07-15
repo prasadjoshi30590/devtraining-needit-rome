@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="DC data upload" max_length="40" name="x_58872_needit_dc_data_upload" sizeclass="15" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=City" label="City" max_length="40" name="u_city" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Country" label="Country" max_length="40" name="u_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DC Domain" label="DC Domain" max_length="40" name="u_dc_domain" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DC Name" label="DC Name" max_length="40" name="u_dc_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DC Severity" label="DC Severity" max_length="40" name="u_dc_severity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Last inspection date" label="Last inspection date" max_length="40" name="u_last_inspection_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Pairing" label="Pairing" max_length="40" name="u_pairing" type="string"/>
+    </element>
+</database>
